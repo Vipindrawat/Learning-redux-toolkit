@@ -4,6 +4,7 @@ const bankslice = createSlice({
     name: "bank",
     initialState: 0,
     reducers: {
+        //returning new value for state:
         withdraw: (state, action) => { return state + action.payload },
         deposit: (state, action) => { return state + action.payload }
         // withdraw: (state) => { return state - 1000 },

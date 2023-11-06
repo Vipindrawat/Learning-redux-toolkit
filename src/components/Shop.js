@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux';
 import { withdraw, deposit } from '../redux/slice/bank';
+import { increment, decrement } from '../redux/slice/counter';
 
 const Shop = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    console.log(withdraw);
-    console.log(deposit);
-
-  }, [])
-
-
   return (
     <div className="d-flex flex-row justify-content-center my-4">
       <div className='inline-block mx-4 '>
@@ -19,9 +13,9 @@ const Shop = () => {
         <button onClick={() => dispatch(deposit(100))} type="button" className="btn btn-primary">+</button>
       </div>
       <div className='inline-block'>
-        <button type="button" className="btn btn-primary">-</button>
+        <button onClick={() => { dispatch(decrement()) }} type="button" className="btn btn-primary">-</button>
         <button type="button" className="btn btn-secondary">Count</button>
-        <button type="button" className="btn btn-primary">+</button>
+        <button onClick={() => { dispatch(increment()) }} type="button" className="btn btn-primary">+</button>
       </div>
     </div>
   )
