@@ -4,6 +4,7 @@ import { withdraw, deposit } from '../redux/slice/bank';
 import { increment, decrement } from '../redux/slice/counter';
 
 const Shop = () => {
+  //usedispatch hook is a simple way to get access to a function(aciton creators) that allows you to dispatch actions to your Redux store:
   const dispatch = useDispatch();
   return (
     <div className="d-flex flex-row justify-content-center my-4">

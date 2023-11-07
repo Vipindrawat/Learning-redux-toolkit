@@ -5,7 +5,10 @@ const counterslice = createSlice({
     initialState: { value: 0 },
     reducers: {
         //changing propertiex in state object:
-        increment: (state) => { state.value += 1 },
+        increment: (state) => {
+            console.log("inside increment");
+            state.value += 1
+        },
         decrement: (state) => { state.value -= 1 }
     }
 })
